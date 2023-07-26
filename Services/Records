@@ -1,0 +1,13 @@
+namespace Shop_Sales.Services;
+
+
+public class RecordsServices
+{
+    private readonly Shop_Sales.DbContext.RecordsDbContext _recordsDbContext;
+
+    public RecordsServices(Shop_Sales.DbContext.RecordsDbContext recordsDbContext)
+    {
+        _recordsDbContext = recordsDbContext;
+    }
+
+}

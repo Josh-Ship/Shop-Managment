@@ -1,9 +1,10 @@
-Shop_Sales.Database.Database database = new Shop_Sales.Database.Database();
-database.createTables();
-
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
+
+// Setup
+
+var startup = new Shop_Sales.Startup.Startup();
+startup.ConfigureServices(builder.Services);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -28,3 +29,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
