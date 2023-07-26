@@ -3,7 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Setup
 
-var startup = new Shop_Sales.Startup.Startup();
+var startup = new Shop_Sales.Startup.SetUp();
 startup.ConfigureServices(builder.Services);
 
 builder.Services.AddControllers();

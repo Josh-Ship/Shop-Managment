@@ -19,6 +19,14 @@ public class RevenueTypeServices
         }
     }
 
+    public Shop_Sales.Models.RevenueType? getRevenue(int id)
+    {
+        using (_revenueTypeDbContext)
+        {
+            return _revenueTypeDbContext.Find<Shop_Sales.Models.RevenueType>(id);
+        }
+    }
+
     public void addRevenue(Shop_Sales.Models.RevenueType revenueType)
     {
         using (_revenueTypeDbContext)

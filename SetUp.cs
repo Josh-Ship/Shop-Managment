@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Shop_Sales.Startup;
 
-public class Startup
+public class SetUp
 {
     public void ConfigureServices(IServiceCollection services)
     {

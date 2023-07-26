@@ -3,7 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 public class RecordsDbContext : DbContext
 {
-    long id {get; set;}
+    public RecordsDbContext(DbContextOptions<RecordsDbContext> options) : base(options)
+    {}
+
+    int id {get; set;}
     DateTime date {get; set;}
-    DbSet<Shop_Sales.Models.Records> records {get; set;}
+    DbSet<Shop_Sales.Models.Records> Records {get; set;}
 }

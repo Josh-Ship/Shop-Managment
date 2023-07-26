@@ -4,12 +4,12 @@ namespace Shop_Sales.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ShopSale : ControllerBase
+public class ShopSales : ControllerBase
 {
     private Shop_Sales.Services.RevenueTypeServices _revenueTypeService;
     private Shop_Sales.Database.Database _database;
 
-    public ShopSale(Shop_Sales.Services.RevenueTypeServices revenueTypeServices)
+    public ShopSales(Shop_Sales.Services.RevenueTypeServices revenueTypeServices)
     {
         _revenueTypeService = revenueTypeServices;
         _database = new Database.Database();
@@ -22,10 +22,23 @@ public class ShopSale : ControllerBase
         return Ok();
     }
 
+    [HttpGet("GetRevenueById")]
+    public IActionResult getRevenue(int id)
+    {
+        var found = _revenueTypeService.getRevenue(id);
+        string objectString = found == null ? "Object is null" : found.ToString();
+        return Ok(objectString);
+    }
+
     [HttpGet("DeleteAll")]
     public IActionResult DeleteAll()
     {
-        
-        return Ok();
+        throw new NotImplementedException();
+    }
+
+    [HttpGet("Testing")]
+    public IActionResult testing()
+    {
+        return Ok("This is a Test!");
     }
 }
