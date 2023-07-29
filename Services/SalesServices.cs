@@ -1,11 +1,11 @@
-namespace Shop_Sales.Services;
+namespace Shop_Manager.Services;
 
 
 public class SalesServices
 {
-    private readonly Shop_Sales.DbContext.SalesDbContext _salesDbContext;
+    private readonly Shop_Manager.DbContext.SalesDbContext _salesDbContext;
 
-    public SalesServices(Shop_Sales.DbContext.SalesDbContext salesDbContext)
+    public SalesServices(Shop_Manager.DbContext.SalesDbContext salesDbContext)
     {
         _salesDbContext = salesDbContext;
     }

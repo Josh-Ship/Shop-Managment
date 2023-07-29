@@ -1,11 +1,11 @@
-namespace Shop_Sales.Services;
+namespace Shop_Manager.Services;
 
 
 public class RevenueTypeServices
 {
-    private readonly Shop_Sales.DbContext.RevenueTypeDbContext _revenueTypeDbContext;
+    private readonly Shop_Manager.DbContext.RevenueTypeDbContext _revenueTypeDbContext;
 
-    public RevenueTypeServices(Shop_Sales.DbContext.RevenueTypeDbContext revenueTypeDbContext)
+    public RevenueTypeServices(Shop_Manager.DbContext.RevenueTypeDbContext revenueTypeDbContext)
     {
         _revenueTypeDbContext = revenueTypeDbContext;
     }
@@ -14,20 +14,20 @@ public class RevenueTypeServices
     {
         using (_revenueTypeDbContext)
         {
-            _revenueTypeDbContext.Add(new Shop_Sales.Models.RevenueType{name=name, amount=amount});
+            _revenueTypeDbContext.Add(new Shop_Manager.Models.RevenueType{name=name, amount=amount});
             _revenueTypeDbContext.SaveChanges();
         }
     }
 
-    public Shop_Sales.Models.RevenueType? getRevenue(int id)
+    public Shop_Manager.Models.RevenueType? getRevenue(int id)
     {
         using (_revenueTypeDbContext)
         {
-            return _revenueTypeDbContext.Find<Shop_Sales.Models.RevenueType>(id);
+            return _revenueTypeDbContext.Find<Shop_Manager.Models.RevenueType>(id);
         }
     }
 
-    public void addRevenue(Shop_Sales.Models.RevenueType revenueType)
+    public void addRevenue(Shop_Manager.Models.RevenueType revenueType)
     {
         using (_revenueTypeDbContext)
         {

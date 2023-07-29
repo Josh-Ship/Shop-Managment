@@ -1,11 +1,11 @@
-namespace Shop_Sales.Services;
+namespace Shop_Manager.Services;
 
 
 public class RecordsServices
 {
-    private readonly Shop_Sales.DbContext.RecordsDbContext _recordsDbContext;
+    private readonly Shop_Manager.DbContext.RecordsDbContext _recordsDbContext;
 
-    public RecordsServices(Shop_Sales.DbContext.RecordsDbContext recordsDbContext)
+    public RecordsServices(Shop_Manager.DbContext.RecordsDbContext recordsDbContext)
     {
         _recordsDbContext = recordsDbContext;
     }

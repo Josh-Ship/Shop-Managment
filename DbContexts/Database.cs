@@ -1,6 +1,6 @@
 using Microsoft.Data.Sqlite;
 
-namespace Shop_Sales.Database;
+namespace Shop_Manager.Database;
 
 public class Database
 {

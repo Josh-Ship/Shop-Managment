@@ -1,22 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Shop_Sales.Controllers;
+namespace Shop_Manager.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ShopSales : ControllerBase
 {
-    private Shop_Sales.Services.RevenueTypeServices _revenueTypeService;
-    private Shop_Sales.Database.Database _database;
+    private Shop_Manager.Services.RevenueTypeServices _revenueTypeService;
+    private Shop_Manager.Database.Database _database;
 
-    public ShopSales(Shop_Sales.Services.RevenueTypeServices revenueTypeServices)
+    public ShopSales(Shop_Manager.Services.RevenueTypeServices revenueTypeServices)
     {
         _revenueTypeService = revenueTypeServices;
         _database = new Database.Database();
     }
 
     [HttpPost("Submit")]
-    public IActionResult submit([FromBody] Shop_Sales.Models.RevenueType revenueType)
+    public IActionResult submit([FromBody] Shop_Manager.Models.RevenueType revenueType)
     {
         _revenueTypeService.addRevenue(revenueType);
         return Ok();

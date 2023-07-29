@@ -2,7 +2,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 // Setup
-
 var startup = new Shop_Sales.Startup.SetUp();
 startup.ConfigureServices(builder.Services);
 
