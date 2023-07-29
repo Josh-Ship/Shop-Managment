@@ -1,4 +1,4 @@
-namespace Shop_Sales.DbContext;
+namespace Shop_Manager.DbContext;
 using Microsoft.EntityFrameworkCore;
 
 public class SalesDbContext : DbContext
@@ -7,5 +7,5 @@ public class SalesDbContext : DbContext
     {}
 
     int id {get; set;}
-    DbSet<Shop_Sales.Models.Sales> Sales {get; set;}
+    DbSet<Shop_Manager.Models.Sales> Sales {get; set;}
 }

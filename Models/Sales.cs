@@ -1,4 +1,4 @@
-namespace Shop_Sales.Models;
+namespace Shop_Manager.Models;
 using System.ComponentModel.DataAnnotations;
 
 public class Sales
