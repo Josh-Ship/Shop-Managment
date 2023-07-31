@@ -15,8 +15,13 @@ public class SetUp
         services.AddDbContext<Shop_Manager.DbContext.RecordsDbContext>(
             options => options.UseSqlite(connectionString)
         );
-
+        
+        services.AddScoped<Shop_Manager.DbContext.IRecordsDbContext, Shop_Manager.DbContext.RecordsDbContext>();
         services.AddScoped<Shop_Manager.Services.RecordsServices>();
+    }
+
+    public void setUpTests(IServiceCollection services)
+    {
 
     }
 }

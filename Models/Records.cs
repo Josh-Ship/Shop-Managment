@@ -14,12 +14,12 @@ public class Records
     public string? name {get; set;}
 
     [Required]
+    [Range(0, int.MaxValue)]
     public int dollars {get; set;}
 
     [Required]
+    [Range(0, 99)]
     public int cents {get; set;}
-
-
 
     public override string ToString()
     {

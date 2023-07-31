@@ -4,17 +4,16 @@ using System.Text.RegularExpressions;
 
 public class RecordsServices
 {
-    private readonly Shop_Manager.DbContext.RecordsDbContext _recordsDbContext;
+    private readonly Shop_Manager.DbContext.IRecordsDbContext _recordsDbContext;
 
-    public RecordsServices(Shop_Manager.DbContext.RecordsDbContext recordsDbContext)
+    public RecordsServices(Shop_Manager.DbContext.IRecordsDbContext recordsDbContext)
     {
         _recordsDbContext = recordsDbContext;
     }
 
-
     public Shop_Manager.Models.Records add(Shop_Manager.Models.Records record)
     {
-        _recordsDbContext.Add(record);
+        _recordsDbContext.Records.Add(record);
         _recordsDbContext.SaveChanges();
         return record;
     }
@@ -29,7 +28,7 @@ public class RecordsServices
 
     public string? find(int id)
     {
-        return JsonSerializer.Serialize(_recordsDbContext.Find<Shop_Manager.Models.Records>(id));
+        return JsonSerializer.Serialize(_recordsDbContext.Records.Find(id));
     }
 
     public string? find(string date)
@@ -37,14 +36,13 @@ public class RecordsServices
         if (Regex.IsMatch(date, (@"^(0?[1-9]|[1-2][0-9]|3[0-1])/(0?[1-9]|1[0-2])/\d{4}$")))
         {
             var matches = new List<Shop_Manager.Models.Records>();
-            using (_recordsDbContext)
-                foreach(var record in _recordsDbContext.Records)
-                    if (record.date == date)
-                        matches.Add(record);
+            foreach(var record in _recordsDbContext.Records)
+                if (record.date == date)
+                    matches.Add(record);
             return JsonSerializer.Serialize(matches);
         }
         return "The date does not match the format dd/mm/yyyy\nYou have entered: " + date;
     }
 
-    
+
 }
