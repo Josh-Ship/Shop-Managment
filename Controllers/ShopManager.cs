@@ -4,41 +4,38 @@ namespace Shop_Manager.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ShopSales : ControllerBase
+public class ShopController : ControllerBase
 {
-    private Shop_Manager.Services.RevenueTypeServices _revenueTypeService;
     private Shop_Manager.Database.Database _database;
+    private Shop_Manager.Services.RecordsServices _recordServices;
 
-    public ShopSales(Shop_Manager.Services.RevenueTypeServices revenueTypeServices)
+    public ShopController(Shop_Manager.Services.RecordsServices recordServices)
     {
-        _revenueTypeService = revenueTypeServices;
+        _recordServices = recordServices;
         _database = new Database.Database();
     }
 
     [HttpPost("Submit")]
-    public IActionResult submit([FromBody] Shop_Manager.Models.RevenueType revenueType)
+    public IActionResult submit([FromBody]Shop_Manager.Models.Records record)
     {
-        _revenueTypeService.addRevenue(revenueType);
-        return Ok();
+       return Ok("Added:\n" + _recordServices.add(record).ToString() + " to database.");
+    }
+    
+    [HttpGet("Find")]
+    public IActionResult findRevenue()
+    {
+        return Ok("Find results:\n" + _recordServices.find());
     }
 
-    [HttpGet("GetRevenueById")]
-    public IActionResult getRevenue(int id)
+    [HttpGet("Find/id")]
+    public IActionResult findRevenue(int id)
     {
-        var found = _revenueTypeService.getRevenue(id);
-        string objectString = found == null ? "Object is null" : found.ToString();
-        return Ok(objectString);
+        return Ok("Find results:\n" + _recordServices.find(id));
     }
 
-    [HttpGet("DeleteAll")]
-    public IActionResult DeleteAll()
+    [HttpGet("Find/date")]
+    public IActionResult findRevenue(string date)
     {
-        throw new NotImplementedException();
-    }
-
-    [HttpGet("Testing")]
-    public IActionResult testing()
-    {
-        return Ok("This is a Test!");
+        return Ok("Find results:\n" + _recordServices.find(date));
     }
 }

@@ -12,18 +12,11 @@ public class SetUp
         var database = new Shop_Manager.Database.Database();
         database.createTables();
 
-        services.AddDbContext<Shop_Manager.DbContext.RevenueTypeDbContext>(
-            options => options.UseSqlite(connectionString)
-        );
-
-        services.AddDbContext<Shop_Manager.DbContext.SalesDbContext>(
-            options => options.UseSqlite(connectionString)
-        );
         services.AddDbContext<Shop_Manager.DbContext.RecordsDbContext>(
             options => options.UseSqlite(connectionString)
         );
 
-        services.AddScoped<Shop_Manager.Services.RevenueTypeServices>();
+        services.AddScoped<Shop_Manager.Services.RecordsServices>();
 
     }
 }

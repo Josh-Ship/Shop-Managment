@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pMdUJslLTKWm8YAuAMDpYSYdVXmJqY6yeReVjG0h9krnNf6y4IA509RelZUhIqW3dr9krl3TDpr2uw5rWJ4JQQ==",
+  "dgSpecHash": "CNR4J5AK76I8FpkVTU9Ti6XFdXKVN/mAW8BmRKb+bEOonHMKIARW9GMN20SEW+ifqMLuC7D9aS/OjT+Wa+IUOA==",
   "success": true,
   "projectFilePath": "/home/josh/Repos/Shop-Sales/Shop-Sales.csproj",
   "expectedPackageFiles": [
+    "/home/josh/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/home/josh/.nuget/packages/microsoft.aspnetcore.openapi/7.0.9/microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
     "/home/josh/.nuget/packages/microsoft.data.sqlite/7.0.9/microsoft.data.sqlite.7.0.9.nupkg.sha512",
     "/home/josh/.nuget/packages/microsoft.data.sqlite.core/7.0.9/microsoft.data.sqlite.core.7.0.9.nupkg.sha512",
@@ -24,7 +25,11 @@
     "/home/josh/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/home/josh/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/home/josh/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/home/josh/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/home/josh/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/josh/.nuget/packages/moq/4.18.4/moq.4.18.4.nupkg.sha512",
+    "/home/josh/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/home/josh/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512",
     "/home/josh/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "/home/josh/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
     "/home/josh/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
@@ -33,6 +38,7 @@
     "/home/josh/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/josh/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "/home/josh/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/home/josh/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/home/josh/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/home/josh/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/home/josh/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"

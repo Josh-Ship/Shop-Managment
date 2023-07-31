@@ -63,3 +63,6 @@
 /home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Castle.Core.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Moq.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/nunit.framework.dll
