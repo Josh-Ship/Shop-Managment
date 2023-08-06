@@ -1,6 +1,5 @@
 namespace Shop_Manager.Models;
 using System.ComponentModel.DataAnnotations;
-
 public class Records
 {
     [Key][Required]
@@ -15,19 +14,15 @@ public class Records
 
     [Required]
     [Range(0, int.MaxValue)]
-    public int dollars {get; set;}
-
-    [Required]
-    [Range(0, 99)]
-    public int cents {get; set;}
+    public int amount_in_cents {get; set;}
 
     public override string ToString()
     {
         string s = "Id: " + record_id + "\n" +
                           "Date: " + date + "\n" +
                           "Name: " + name + "\n" + 
-                          "Dollars: " + dollars + "\n" +
-                          "Cents: " + cents + "\n";
+                          "Dollars: " + amount_in_cents/100 + "\n" +
+                          "Cents: " + amount_in_cents%100 + "\n";
         return s;
     }
 }

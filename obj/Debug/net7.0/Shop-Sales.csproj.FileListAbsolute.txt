@@ -148,3 +148,7 @@
 /home/josh/Repos/Shop-Sales/bin/Debug/net7.0/nunit.engine.api.dll
 /home/josh/Repos/Shop-Sales/bin/Debug/net7.0/nunit.engine.core.dll
 /home/josh/Repos/Shop-Sales/bin/Debug/net7.0/testcentric.engine.metadata.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Humanizer.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/Mono.TextTemplating.dll
+/home/josh/Repos/Shop-Sales/bin/Debug/net7.0/System.CodeDom.dll
